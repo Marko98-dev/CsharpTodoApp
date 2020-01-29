@@ -1,0 +1,12 @@
+﻿<h2>@ViewBag.title</h2>
+
+<form method="post">
+
+    @foreach(var todo in ViewBag.todos)
+    {
+        <input type="checkbox" name="todosIds" id="@todo.TodoId" value="@todo.TodoId">
+        <label for="@todo.TodoId">@todo.Name</label>
+    }
+
+    <input type="submit" value="Remove Seletected Todos" />
+</form>
